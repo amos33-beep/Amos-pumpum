@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AMOS PUPUM - The Boss of Meme Coins. Welcome to the revolution!" />
+  <title>AMOS PUPUM | The Meme Coin Revolution</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="AMOS PUPUM Logo" class="logo-img" />
+        <div class="tagline">Too many frogs, not enough bosses!</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">The Boss of All Meme Coins</h1>
+        <h2 class="hero-subtitle">Slayer of Charts • Living the Meme Dream</h2>
+        
+        <div class="btn-container">
+          <a href="https://x.com/Turci999Umberto" target="_blank" class="btn btn-twitter">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <a href="https://t.me/wordssatagepumpfun" target="_blank" class="btn btn-telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+          </a>
+          <button id="contract-btn" class="btn btn-contract">
+            <i class="fas fa-file-contract"></i> Contract Address
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-crown"></i></div>
+        <h3 class="feature-title">Boss of Frogs</h3>
+        <p class="feature-text">Not just another meme coin — the apex predator of memes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 class="feature-title">Slayer of Charts</h3>
+        <p class="feature-text">Defying expectations with every move.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+        <h3 class="feature-title">Living the Meme Dream</h3>
+        <p class="feature-text">Experience the ultimate meme coin journey to the moon!</p>
+      </div>
+    </section>
+
+    <section class="contract-section">
+      <h3 class="contract-title">Contract Address</h3>
+      <div class="contract-address" id="contract-address">tRmRf5Cycf1haB3p1kekwEQa8Jx4oTyzJf9oXVupump</div>
+      <p>Click the button above to copy to clipboard</p>
+    </section>
+
+    <div class="disclaimer">
+      <h4 class="disclaimer-title">Important Disclaimer</h4>
+      <p>Meme coins are risky. By participating, you assume full responsibility. Not financial advice. Always do your own research before investing.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 AMOS PUPUM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contractBtn = document.getElementById('contract-btn');
+      const contractAddress = document.getElementById('contract-address').textContent;
+
+      contractBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(contractAddress)
+          .then(() => {
+            contractBtn.classList.add('copied');
+            setTimeout(() => contractBtn.classList.remove('copied'), 2000);
+          })
+          .catch(err => {
+            console.error('Copy failed:', err);
+            alert('Copy failed — please copy manually.');
+          });
+      });
+    });
+  </script>
+</body>
+</html>
